@@ -1,0 +1,38 @@
+server:
+  port: 11234
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    use-root-path: true
+  api-docs:
+    path: /swagger.v1+json
+  api:
+    title: Autenticacion Human Blend API
+    description: Autenticacion del SaaS API
+    version: 1.0
+
+spring:
+  application:
+    name: human-blend-backend-auth
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: ${SPRING_DATASOUCE_PASSWORD}
+    url: ${SPRING_DATASOUCER_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.default_schema: users
+      jdbc:
+        lob:
+          non_contextual_creation: false
+      generate-ddl: true
+      show-sql: true
+      mvc:
+        format:
+          date: yyyy-MM-dd
+          date-time: yyyy-MM-dd HH:mm:ss
+          time: HH:mm:ss
