@@ -17,9 +17,9 @@ spring:
     name: human-blend-backend-auth
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: ${SPRING_DATASOUCE_PASSWORD}
-    url: ${SPRING_DATASOUCER_URL}
-    username: ${SPRING_DATASOURCE_USERNAME}
+    password: 
+    url: jdbc:mysql://localhost:3306/users
+    username: root
   jpa:
     hibernate:
       ddl-auto: update
