@@ -31,7 +31,7 @@ public class SecurityConfiguration {
         http
             .cors(cors -> cors.configurationSource(request -> {
                 CorsConfiguration config = new CorsConfiguration();
-                config.setAllowedOrigins(List.of("http://localhost:4200/")); // Cambiar según origen real
+                config.setAllowedOrigins(List.of("http://localhost:4200/", "http://192.168.1.9:4200/")); // Cambiar según origen real
                 config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                 config.setAllowedHeaders(List.of("*"));
                 config.setAllowCredentials(true);
